@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 2 - Flex</title>
+    <style>
+      .container {
+        display: flex;
+        border: 1px solid #ccc;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .icon {
+        padding-left: 80px;
+        width: 100px;
+        height: 80px;
+        flex-shrink: 0;
+      }
+      article:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      article:nth-child(2) {
+        top: 0;
+        left: 180px;
+      }
+
+      article:nth-child(3) {
+        top: 0;
+        left: 340px;
+      }
+
+      article:nth-child(4) {
+        top: 100px;
+        left: 0;
+      }
+
+      article:nth-child(5) {
+        top: 100px;
+        left: 180px;
+      }
+
+      article:nth-child(6) {
+        top: 100px;
+        left: 340px;
+      }
+
+      article:nth-child(7) {
+        top: 200px;
+        left: 0;
+      }
+
+      article:nth-child(8) {
+        top: 200px;
+        left: 180px;
+      }
+
+      article:nth-child(9) {
+        top: 200px;
+        left: 340px;
+      }
+
+      .icon[title="css"] {
+        background: url("./file-icons.png") -749px -19px no-repeat;
+      }
+
+      .icon[title="pdf"] {
+        background: url("./file-icons.png") -24px -19px no-repeat;
+      }
+
+      .icon[title="jpg"] {
+        background: url("./file-icons.png") -1111px -19px no-repeat;
+      }
+
+      .icon[title="word"] {
+        background: url("./file-icons.png") -567px -200px no-repeat;
+      }
+
+      .icon[title="zip"] {
+        background: url("./file-icons.png") -1111px -200px no-repeat;
+      }
+
+      .icon[title="xml"] {
+        background: url("./file-icons.png") -930px -19px no-repeat;
+      }
+
+      .icon[title="js"] {
+        background: url("./file-icons.png") -567px -19px no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article>
+        <div title="css" class="icon">
+          <a href="downloads/appstyle.css">Download Style File</a>
+        </div>
+      </article>
+      <article>
+        <div title="pdf" class="icon">
+          <a href="downloads/mystyle.css">Download Resume</a>
+        </div>
+      </article>
+      <article>
+        <div title="pdf" class="icon">
+          <a href="downloads/mystyle.css">Download Passport</a>
+        </div>
+      </article>
+      <article>
+        <div title="jpg" class="icon">
+          <a href="downloads/mystyle.css">Download Photo</a>
+        </div>
+      </article>
+      <article>
+        <div title="pdf" class="icon">
+          <a href="downloads/mystyle.css">Download Bank Statement</a>
+        </div>
+      </article>
+      <article>
+        <div title="word" class="icon">
+          <a href="downloads/mystyle.css">Download Request Letter Format</a>
+        </div>
+      </article>
+      <article>
+        <div title="zip" class="icon">
+          <a href="downloads/mystyle.css">Download All Past Reports</a>
+        </div>
+      </article>
+      <article>
+        <div title="xml" class="icon">
+          <a href="downloads/mystyle.css">Download Backup</a>
+        </div>
+      </article>
+      <article>
+        <div title="js" class="icon">
+          <a href="downloads/lib.js">Download Library</a>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
