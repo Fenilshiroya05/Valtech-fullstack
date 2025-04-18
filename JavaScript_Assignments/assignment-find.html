@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find And FindAll</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      .selected {
+        background-color: orangered;
+        font-weight: bold;
+      }
+      #text{
+        background-color: gray;
+      }
+      h2{
+        text-align: center;
+      }
+      .box{
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+     <script>
+        function highlightWord(findAll) {
+          var word = document.getElementById("input").value.trim();
+          var text = document.getElementById("text").innerText;
+  
+          if (!word) {
+            alert("Enter any word");
+            return;
+          }
+          var result = "";
+          var start = 0;
+          var index;
+  
+          var lowerText = text.toLowerCase();
+          var lowerWord = word.toLowerCase();
+  
+          while ((index = lowerText.indexOf(lowerWord, start)) !== -1) {
+            result += text.substring(start, index);
+            result +=
+              '<span class="selected">' +
+              text.substring(index, index + word.length) +
+              "</span>";
+            start = index + word.length;
+  
+            if (!findAll) break;
+          }
+  
+          result += text.substring(start);
+  
+          if (result === text) {
+            alert("Input not found.");
+          } else {
+            document.getElementById("text").innerHTML = result;
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <h2>Find and FindAll :</h2>
+    <p id="text">
+      It's not only writers who can benefit from this free online tool. If
+      you're a programmer who's working on a project where blocks of text are
+      needed, this tool can be a great way to get that. It's a good way to test
+      your programming and that the tool being created is working well. Above
+      are a few examples of how the random paragraph generator can be
+      beneficial. The best way to see if this random paragraph picker will be
+      useful for your intended purposes is to give it a try. Generate a number
+      of paragraphs to see if they are beneficial to your current project. If
+      you do find this paragraph tool useful, please do us a favor and let us
+      know how you're using it. It's greatly beneficial for us to know the
+      different ways this tool is being used so we can improve it with updates.
+      This is especially true since there are times when the generators we
+      create get used in completely unanticipated ways from when we initially
+      created them. If you have the time, please send us a quick note on what
+      you'd like to see changed or added to make it better in the future.
+    </p>
+    <div class="box">
+        <input type="text" id="input" placeholder="Enter any word" />
+        <button onclick="highlightWord(false)">Find</button>
+        <button onclick="highlightWord(true)">Find All</button>
+    </div>
+  </body>
+</html>
